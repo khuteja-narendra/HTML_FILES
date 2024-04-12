@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styles Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <p class="bold-text">This is a paragraph with bold text.</p>
+        <p class="italic-text">This is a paragraph with italic text.</p>
+        <p class="underline-text">This is a paragraph with underlined text.</p>
+        <p class="strike-through-text">This is a paragraph with strikethrough text.</p>
+        <p class="text-transform-uppercase">This is uppercase text.</p>
+        <p class="text-transform-lowercase">This is LOWERCASE text.</p>
+        <p class="text-transform-capitalize">this is capitalized text.</p>
+        <div class="longhand">
+            <p>This is a paragraph with longhand margin.</p>
+        </div>
+        <div class="shorthand">
+            <p>This is a paragraph with shorthand margin.</p>
+        </div>
+    </div>
+    <style>
+    /* Font Styles */
+body {
+    font-family: Arial, sans-serif; /* Use Arial font or sans-serif as fallback */
+}
+
+h1 {
+    font-family: "Times New Roman", Times, serif; /* Use Times New Roman font or serif as fallback */
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif; /* Use Verdana font or sans-serif as fallback */
+}
+
+/* Color Styles */
+.container {
+    color: #7a1165; /* Text color */
+    background-color: #f0f0f0; /* Background color */
+}
+
+h1 {
+    color: #007bff; /* Blue color for heading */
+}
+
+p {
+    color:#6c757d ; /* Dark gray color for paragraph */
+}
+
+/* Declaration Types */
+/* Longhand */
+.longhand {
+    margin-top: 90px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+/* Shorthand */
+.shorthand {
+    margin: 10px 20px 30px 40px; /* top right bottom left */
+}
+
+/* Various Text Properties */
+.bold-text {
+    font-weight: bold; /* Bold text */
+}
+
+.italic-text {
+    font-style: italic; /* Italic text */
+}
+
+.underline-text {
+    text-decoration: underline; /* Underlined text */
+}
+
+.strike-through-text {
+    text-decoration: line-through; /* Strikethrough text */
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.text-transform-lowercase {
+    text-transform: lowercase; /* Convert text to lowercase */
+}
+
+.text-transform-capitalize {
+    text-transform: capitalize; /* Capitalize first letter of each word */
+}
+</style>
+</body>
+</html>
