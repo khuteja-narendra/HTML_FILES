@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Menus</title>
+<style>
+  /* Horizontal Menu */
+  .horizontal-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color:#2d6ec3;
+    overflow: hidden;
+  }
+  .horizontal-menu li {
+    float: left;
+  }
+  .horizontal-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .horizontal-menu li a:hover {
+    background-color: #111;
+  }
+
+  /* Vertical Menu */
+  .vertical-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    width: 200px;
+  }
+  .vertical-menu li a {
+    display: block;
+    color: #000;
+    padding: 15px 16px;
+    text-decoration: none;
+  }
+  .vertical-menu li a:hover {
+    background-color: #ccc;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #2d6ec3;
+    overflow: hidden;
+  }
+  .dropdown-menu li {
+    float: left;
+    position: relative;
+  }
+  .dropdown-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+  .dropdown-menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #8b8687;
+    min-width: 200px;
+    z-index: 1;
+  }
+  .dropdown-menu .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+  }
+  .dropdown-menu .dropdown-content a:hover {
+    background-color: #111;
+  }
+  .dropdown-menu li:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Responsive Navigation Menu */
+  .nav {
+    background-color: #0cc6de;
+    padding: 10px;
+  }
+  .nav .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .nav .menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+  }
+  .nav .menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav .menu li {
+    margin-left: 20px;
+  }
+  .nav .menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 768px) {
+    .nav .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top:60px;
+      left: 0;
+      width: 100%;
+    }
+    .nav .menu-toggle {
+      display: block;
+    }
+    .nav .menu-toggle.active {
+      color: white;
+    }
+    .nav .menu-toggle.active + .menu {
+      display: flex;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Horizontal Menu -->
+<ul class="horizontal-menu">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<!-- Vertical Menu -->
+<ul class="vertical-menu" style="margin-top: 20px;">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<!-- Dropdown Menu -->
+<ul class="dropdown-menu" style="margin-top: 20px;">
+  <li><a href="#">Home</a></li>
+  <li>
+    <a href="#">Products</a>
+    <ul class="dropdown-content">
+      <li><a href="#">Product 1</a></li>
+      <li><a href="#">Product 2</a></li>
+      <li><a href="#">Product 3</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<!-- Responsive Navigation Menu -->
+<nav class="nav" style="margin-top: 20px;">
+  <a href="#" class="logo">Logo</a>
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    var menuToggle = document.querySelector('.menu-toggle');
+    menu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
