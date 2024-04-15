@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overflow in a Container Example</title>
+<style>
+    .container {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        overflow: scroll; 
+    }
+
+    .content {
+        width: 250px ;
+        height: 200px; 
+        background-color: rgb(84, 240, 154);
+    }
+    .text-block {
+        width: 150px;
+        height: 100px;
+        border: 1px solid black;
+        overflow: hidden; /* Change to 'scroll' to enable scrolling */
+    }
+    .content {
+        width: 200px; /* This width exceeds the text block width */
+        height: 150px; /* This height exceeds the text block height */
+        background-color: rgb(162, 214, 116);
+    }
+    .image-container {
+        width: 200px;
+        height: 150px;
+        border: 1px solid black;
+        overflow: scroll; /* Change to 'scroll' to enable scrolling */
+    }
+
+    .image {
+        width: 300px; /* This width exceeds the container width */
+        height: 200px; /* This height exceeds the container height */
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        max-height: 150px; /* Fixed height for the dropdown menu */
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    span.a{
+        height: 100px;
+        width: 100px;
+        display: inline;
+        padding: 5px;
+        border: 3px solid black;
+        background-color: rgb(184, 83, 130);
+       }
+       span.b{
+        height: 100px;
+        width: 100px;
+        display: inline-block;
+        padding: 5px;
+        border: 3px solid black;
+        background-color: rgb(184, 83, 130);
+       }
+       span.c{
+        height: 100px;
+        width: 100px;
+        display: block;
+        padding: 5px;
+        border: 3px solid black;
+        background-color: rgb(184, 83, 130);
+       }
+
+</style>
+</head>
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <br>
+
+    <div class="text-block">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+<br>
+    <div class="image-container">
+        <img class="image" src="image1.jpg">
+    </div>
+    <br>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+            <a href="#">Option 4</a>
+            <a href="#">Option 5</a>
+            <a href="#">Option 6</a>
+            <a href="#">Option 7</a>
+            <a href="#">Option 8</a>
+            <a href="#">Option 9</a>
+            <a href="#">Option 10</a>
+            
+            
+        </div>
+    </div>
+    <div class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea recusandae cum nobis sint pariatur necessitatibus, voluptatem obcaecati voluptas placeat alias est atque non veritatis laborum, dolore itaque mollitia. Repellat!</div>
+    <br>
+<div class="b">
+
+</div>
+    <h1>Inline Properties</h1>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis provident cupiditate nesciunt aut recusandae nisi doloremque, aperiam iusto<span class="a">anjum</span> <span class="a">anjum</span> amet aspernatur architecto, consectetur incidunt voluptatem quas, quisquam laboriosam. Facilis, adipisci. Aliquam.</div>
+
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <span class="b">Anjum</span> <span class="b">khuteja</span>Officiis provident cupiditate nesciunt aut recusandae nisi doloremque, aperiam iusto amet aspernatur architecto, consectetur incidunt voluptatem quas, quisquam laboriosam. Facilis, adipisci. Aliquam.</div>
+
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <span class="c">Anjum</span> <span class="c">khuteja</span>Officiis provident cupiditate nesciunt aut recusandae nisi doloremque, aperiam iusto amet aspernatur architecto, consectetur incidunt voluptatem quas, quisquam laboriosam. Facilis, adipisci. Aliquam.</div>
+</body>
+</html>
